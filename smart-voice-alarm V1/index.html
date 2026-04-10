@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#050505">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Smart Voice Alarm Pro</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="status-bar">
+            <span id="status-text">SYSTEM SECURE • AUTO-TZ ACTIVE</span>
+        </div>
+
+        <div class="clock-container">
+            <div id="clock" class="clock">00:00</div>
+            <div id="seconds" class="seconds">00</div>
+        </div>
+
+        <div class="voice-feedback">
+            <p id="command-display">Toca el micro y dicta tus alarmas</p>
+        </div>
+
+        <div class="alarms-section">
+            <h3>Alarmas Activas</h3>
+            <ul id="alarms-list"></ul>
+        </div>
+
+        <div class="controls">
+            <button id="stop-btn" class="btn-stop hidden">DETENER ALARMA</button>
+            <div class="mic-wrapper">
+                <div class="pulse-ring"></div>
+                <button id="mic-btn" class="btn-mic">🎤</button>
+            </div>
+        </div>
+        <p class="hint">"Mañana 7 AM", "Diaria 22:00" | "Terminar"</p>
+    </div>
+
+    <audio id="alarm-audio" src="assets/alarm.mp3" loop preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
